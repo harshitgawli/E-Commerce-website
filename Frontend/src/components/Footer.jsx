@@ -35,7 +35,7 @@ const Footer = () => {
         <div>
             <hr />
             <p className='py-5 text-sm text-center'>
-                Copyright © 2024 Libazz. All rights reserved.
+                Copyright © 2026 Libazz. All rights reserved.
             </p>
         </div>
       

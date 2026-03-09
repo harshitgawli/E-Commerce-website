@@ -52,20 +52,20 @@ const registerUser = async(req ,res)=>{
         const exist = await userModel.findOne({email})
 
         if(exist){
-            res.json({
+           return res.json({
                 success:false,
                 message:"User already exists"
             })
         }
 
         if(!validator.isEmail(email)){
-            res.json({
+           return  res.json({
                 success:false,
                 message:"Please enter a vallid email"
             })
         }
         if(password.length<8){
-            res.json({
+           return  res.json({
                 success:false,
                 message:"Please enter a strong password"
             })
@@ -109,6 +109,12 @@ const adminLogin = async(req ,res)=>{
                 success:true,
                 message:"Admin login successful",
                 token:token
+            })
+        }
+        else{
+            res.json({
+                success:false,
+                message:"Invalid Credentials",
             })
         }
     } catch (error) {
