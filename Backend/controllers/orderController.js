@@ -42,7 +42,24 @@ const placeOrder = async (req,res)=>{
 //all order data for admin
 
 const allOrders = async (req,res)=>{
+        try {
 
+            const orders = await orderModel.find({})
+
+          return  res.json({
+                success:true,
+                message:"all order fetched successfully",
+                orders: orders
+            })
+            
+        } catch (error) {
+            console.log(error);
+        return res.json({
+            success:false,
+            message:error.message
+        })
+            
+        }
 }
 
 
@@ -50,12 +67,51 @@ const allOrders = async (req,res)=>{
 
 const userOrders = async (req,res)=>{
 
+    try {
+
+        const {userId } = req.body
+
+        const order = await orderModel.find({userId})
+
+        res.json({
+            success:true,
+            message:"Orders fetched Successfully",
+            order:order
+        })
+        
+    } catch (error) {
+        console.log(error);
+        res.json({
+            success:false,
+            message:error.message
+        })
+    }
+
 }
 
 
 //update order status
 
 const updateStatus = async (req,res)=>{
+
+    try {
+
+        const {orderId , status } = req.body
+
+        await orderModel.findByIdAndUpdate(orderId,{status})
+
+        res.json({
+            success:true,
+            message:"Status Updated"
+        })
+        
+    } catch (error) {
+        console.log(error);
+        res.json({
+            success:false,
+            message:error.message
+        })
+    }
 
 }
 

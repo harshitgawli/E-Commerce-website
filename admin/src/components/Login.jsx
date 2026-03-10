@@ -26,6 +26,7 @@ const Login = ({setToken}) => {
         
       }
   }
+
   return (
     <div className='min-h-screen flex items-center justify-center w-full bg-gray-300'>
       <div className=' bg-white shadow-md rounded-lg px-8 py-6 max-w-md'>
