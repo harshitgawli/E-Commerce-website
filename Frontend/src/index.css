@@ -23,3 +23,47 @@ a.active hr{
     color: black;
   }
 }
+
+
+
+
+/* @import "tailwindcss"; */
+
+@import "tailwindcss";
+
+@theme {
+  /* ── Colors ── */
+  --color-primary: #1a1a1a;        /* darker black */
+  --color-accent: #b8860b;         /* deeper gold */
+  --color-background: #f2ede6;     /* warmer beige */
+  --color-surface: #ffffff;
+
+  /* ── Fonts ── */
+  --font-sans: "DM Sans", sans-serif;
+  --font-serif: "Playfair Display", serif;
+}
+
+/* ── Base Styles ── */
+body {
+  background-color: var(--color-background);
+  font-family: var(--font-sans);
+  color: var(--color-primary);
+}
+
+/* ── Selection Color ── */
+::selection {
+  background: var(--color-accent);
+  color: white;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 10px;
+}

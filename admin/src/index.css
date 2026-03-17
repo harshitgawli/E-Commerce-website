@@ -1,18 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
-
 @import "tailwindcss";
 
-*{
-    font-family: Outfit;
+* {
+  font-family: "DM Sans", sans-serif;
+  box-sizing: border-box;
 }
 
-select ,input ,textarea{
-  border: 1px solid #c2c2c2;
-  outline-color: #C586A5;
-  border-radius: 4px;
+html, body, #root {
+  background-color: #f5e6c8 !important;
+  min-height: 100vh;
 }
 
-.active{
-  background-color: #ffebf5;
-  border-color: #C586A5;
+body {
+  background-color: #f5e6c8;
+  color: #1a1a1a;
+}
+
+/* Force all white backgrounds to match theme */
+.bg-white {
+  background-color: #fefcf7 !important;
+}
+
+.bg-gray-50 {
+  background-color: #f8f9fb !important;
+}
+
+main, section, form {
+  background-color: #f8f9fb;
+}
+
+select, input, textarea {
+  border: 1px solid #e4e6ea;
+  outline-color: #b8860b;
+  border-radius: 8px;
+  font-family: "DM Sans", sans-serif;
+  background-color: #fffdf7;
+}
+
+.active {
+  background-color: #fef9ec;
+  border-color: #b8860b;
+  color: #b8860b;
+}
+
+::selection {
+  background: #b8860b;
+  color: white;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f8f9fb; }
+::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #b8860b; }
+
+.Toastify__toast {
+  font-family: "DM Sans", sans-serif !important;
+  font-size: 13px !important;
+  border-radius: 12px !important;
 }
