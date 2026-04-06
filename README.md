@@ -99,8 +99,8 @@ CLOUDINARY_NAME=your_cloud_name
 
 JWT_SECRET=your_secret_key
 
-ADMIN_EMAIL=your_admin_email
-ADMIN_PASSWORD=your_admin_password
+ADMIN_EMAIL=your_admin_email  //for testing email: admin@gmail.com
+ADMIN_PASSWORD=your_admin_password // password:12345678
 ```
 
 ---
